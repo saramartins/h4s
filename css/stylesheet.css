@@ -196,6 +196,25 @@ button#checkin:hover{
 	background-color: #EB9410;
 }
 
+button#apply{
+  font-family: 'Lato';
+  background-color: #ffa727;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 15px 5px 15px;
+  width: 150px;
+  height: 40px;
+  border: 0; 
+  border-radius: 0;
+  font-size: 17px;
+  -webkit-appearance: none;
+  margin-top: 10px;
+}
+
+button#apply:hover{
+  background-color: #EB9410;
+}
+
 @media(min-width:767px) {
     .content-section {
         padding-top: 250px;

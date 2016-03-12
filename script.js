@@ -22,8 +22,9 @@ function myFunction(xml) {
 
 
   var table="<tr><th>Annonsrubrik</th><th>Yrkesbenämning</th><th>Kommun</th><th>Länk</th></tr>";
-  var kommun = "Kommun:     ";
-  var yrke = "Yrke:      ";
+  var kommun = "";
+  var yrke = "";
+  var url = "";
 
   var x = xmlDoc.getElementsByTagName("matchningdata");
   //var annonsId = xmlDoc.getElementsByTagName("matchningdata");
@@ -41,12 +42,14 @@ function myFunction(xml) {
 */
 
 
-  kommun += " " + x[1].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue;
-  yrke += " " + x[1].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
+  kommun += " " + x[3].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue;
+  yrke += " " + x[3].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
+  url += " " + x[3].getElementsByTagName("annonsurl")[0].childNodes[0].nodeValue;
 
   //document.getElementById("demo").innerHTML = table;
   document.getElementById("kommun").innerHTML = kommun;
   document.getElementById("yrke").innerHTML = yrke;
+  document.getElementById("url").innerHTML = url;
 
 }
 /*
