@@ -11,7 +11,7 @@
         controller  : 'mainController'
       })
 
-      .when('/results', {
+      .when('/main', {
         templateUrl : 'results.html',
         controller  : 'resultsController'
       });
