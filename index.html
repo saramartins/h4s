@@ -8,6 +8,72 @@
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
 
+<body>
 <p> Ockupera glesbygd'n </p>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
 
+function init() {
+
+ //variabeln jsonObj innehåller den json frågan som används i anropet till SCBs API. Det är alltså denna fråga du skall kopiera från SCB när du i Statistik databasen klickat på "API för denna tabell"
+var jsonObj = 
+{   
+"query": [
+ {       
+ "code": "ContentsCode",
+  "selection": {         
+    "filter": "item",         
+    "values": [           
+      "BE0101N1"         
+    ]       
+   }     
+},    
+{       
+  "code": "Tid",
+   "selection": {         
+   "filter": "item",         
+   "values": [           
+   "2010",           
+   "2011"         
+   ]       
+  }     
+ }    
+],   
+"response": {     
+  "format": "json"   
+ } 
+};
+
+//jQuery AJAX method 	
+$.ajax({
+ //Här anger du url:en för ditt anrop)
+ 	 url:"http://api.scb.se/OV0104/v1/doris/sv/ssd/BE/BE0101/BE0101A/BefolkningNy",
+	 type: "POST",
+	 data: JSON.stringify(jsonObj),  //skapa en textsträng av vår JSON-formaterad fråga 	  
+	 dataType: "json",
+	 success: function (data, textStatus, jqXHR) {
+			            print(data);
+			        },
+  	 error: function (errorMessage) {
+	console.log("Något gick fel.");
+	
+	}
+  
+  }); //slut på $.ajax method
+  
+}//slut på init function	
+
+	function print(data) {
+		console.log(data);
+		document.getElementById("resultat").innerHTML = "";
+		for(var indx = 0; indx < data.query.backlinks.length; indx++) {
+		document.getElementById("resultat").innerHTML += data.query.backlinks[indx].title;
+		document.getElementById("resultat").innerHTML += "<br><br>";
+	}
+}
+</script>
+
+<p id = "resultat"></p>
+
+</body>
 </html>
