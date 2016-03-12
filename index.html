@@ -70,9 +70,6 @@
     </div>
 
 
-<button type="button" onclick="loadXMLDoc()">Skriv ut alla annonsrubriker</button>
-<br><br>
-<table id="demo"></table>
 
 
 
@@ -85,7 +82,15 @@
 
     <div class = "button-section">
     	<div class = "styled-button">
-				<button id="search" type="button"><div id = "title">FIND A MATCH</div></button>
+				<button id="search" type="button" onclick = "loadXMLDoc()"><div id = "title">FIND A MATCH</div></button>
+					
+
+					<div id = "resultat">
+						<p id = "kommun"></p>
+						<p id = "yrke"></p>
+					</div>
+					
+
 		</div>
 	</div>
 
