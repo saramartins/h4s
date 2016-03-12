@@ -15,17 +15,18 @@
 
 </head>
 
-<body id ="page-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <header>
         <div class="header-content">
             <div class="header-content-inner">
 				<div class="row">
 					<div class="col-lg-12">
-						<div id = "intro">Career explorer helps you find the right <span style="color:#ffa727;">job</span> and <span style="color:#ffa727;">housing</span> based on your <strong>qualifications</strong></div>
+						<div id = "intro">Career explorer helps you find the right <strong><span style="color:#ffa727;">job</span></strong> and <strong><span style="color:#ffa727;">housing</span></strong> based on your <strong>qualifications</strong></div>
 						<div class ="col-lg-6 offset-4">
-							<button id="checkin" type="button">COMPANY</button>
+							<a class="page-scroll" style ="color:#fff;" href="#housing">
+								<button id="checkin" type="button"><strong>PRIVATE</strong></button></a>	
 						</div>
-							<button id="checkin" type="button">PRIVATE</button>
+							<button id="checkin" type="button"><strong>COMPANY</strong></button>
 
 					</div>
 				</div>
@@ -33,15 +34,15 @@
 </div>
 </header>
 	<!-- HOUSING -->
-	<section id ="housing">
-	<div class="housing-section">
+	<div id="housing" class="housing-section">
         <div class="container">
          <div class="col-lg-8 col-lg-offset-2">
 
 			<div id = "title"><strong> Housing </strong></div>
-			<br>
-			
-			<div id = "subtitle">How many rooms</div>
+			<div id = "subtitle"><strong>
+				CHOOSE HOW MANY ROOMS YOU WANT TO HAVE <br> IN THE MENU BELOW</strong>
+			</div>
+
 				<div class ="styled-select">
 					<select id = "housing">
 		  			<option value="one">1 room</option>
@@ -53,51 +54,46 @@
 			</div>
           </div>
     </div>
-	</section>
 
 	<div class="competence-section">
        <div class="container">
-         <div class="col-lg-8 col-lg-offset-2">
-				<div id = "title"><strong> Competence </strong></div>
-				<br>
-				<div id = "subtitle">Work Qualification</div>
+       		<div id = "title"><strong>Work Qualification</strong></div>
+				<div id = "subtitle">
+					<strong>TYPE THE KIND OF JOB YOU ARE LOOKING FOR</strong> 
+				</div>
 
 				<div class ="styled-search">
 					<div id = "searchtext"><input type="text" id ="searchtext" ng-model="name">
 					<br>
 					</div>
 		 		</div>
-		  </div>
-        </div>
-    </div>
-
-
-
-
-
-</header>
-
-<script>
-
-
-</script>
+		 </div>
+	</div>
 
     <div class = "button-section">
-    	<div class = "styled-button">
-				<button id="search" type="button" onclick = "loadXMLDoc()"><div id = "title">FIND A MATCH</div></button>
-					
-
-					<div id = "resultat">
-						<p id = "kommun"></p>
-						<p id = "yrke"></p>
+    	<a class="page-scroll" style ="color:#fff;" href="#results">
+				<button id="search" type="button" onclick = "loadXMLDoc()">
+					<div id = "title"><strong>FIND A MATCH!</strong>
 					</div>
-					
+				</button>
+		</a>
+	</div>
+	
+	<div id="results" class="results-section">
+		<div class="container">
+			<div id = "resultat">
+				<p id = "kommun"></p>
+				<p id = "yrke"></p>
+			</div>
 
 		</div>
 	</div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
 
 </body>
 </html>

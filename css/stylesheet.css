@@ -64,31 +64,35 @@ header .header-content .header-content-inner p {
   }
 }
 
-
-
 #title
 {
-	font-size: 500%;
+	font-size: 400%;
 	font-family: 'Lato';
 	text-transform: uppercase;
+  letter-spacing: 7px;
 }
 
 #intro{
 	text-transform: uppercase;
-	font-size: 400%;
+	font-size: 290%;
 	font-family: 'Lato';
+    letter-spacing: 7px;
 }
 
 #subtitle
 {
-	font-size: 300%;
+	font-size: 180%;
 	font-family: 'Lato';
+  padding-top: 0px;
+  padding-bottom: 30px;
+  color:#5F5F5F;
 }
 
 
 .housing-section {
     width: 100%;
     padding: 50px 70px;
+    height: 40%;
     color: #fff;
     background-color: #c5d9ed;
      -webkit-background-size: cover;
@@ -99,8 +103,9 @@ header .header-content .header-content-inner p {
 }
 .competence-section {
     width: 100%;
-    padding: 50px 0;
-    color: #44443E;
+    height: 40%;
+    padding: 50px 70px;
+    color: #fff;
     background-color: #ffa727;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -112,6 +117,7 @@ header .header-content .header-content-inner p {
 .button-section {
     width: 100%;
     color: #fff;
+    height:20%;
     background-color: #074d5e;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -120,60 +126,73 @@ header .header-content .header-content-inner p {
 
 }
 
+.results-section
+{
+    width: 100%;
+    color: #fff;
+    height:80%;
+    background-color: #074d5e;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 .styled-select select {
    text-align: center;
-   color: #fff;
-   background-color: #3b8ec2;
+   color: #5F5F5F;
+   background-color: #fff;
    -webkit-border-radius: 5px;
    -moz-border-radius: 5px;
    border-radius: 5px;
-      font-size: 14px;
-   height: 29px;
+    font-size: 14px;
+   height: 40px;
    padding: 5px; /* If you add too much padding here, the options won't show in IE */
-   width: 268px;
+   width: 450px;
+   border-color:#b9b9b9; 
    }
 
 .styled-search input
 {
 	margin-top: 10px;
    background: #fff;
-   width: 300px;
+   width: 450px;
    padding: 5px;
    line-height: 1;
    border: 1px solid #b9b9b9;
    border-radius: 0;
-   height: 34px;
+   height: 40px;
    -webkit-appearance: none;
 }
 
-.styled-button button {
-	background: #074d5e;
+button#search {
+	  background: #074d5e;
    	width: 100%;
-   	padding:100px;
+    height: 100%;
    	font-size: 20px;
    	border: 0;
    	border-radius: 0;
 }
 button#search:hover{
-	background-color: #064150;
+	background-color: #024150
 }
 
 button#checkin{
+    font-family: 'Lato';
 	background-color: #ffa727;
 	text-align: center;
 	text-transform: uppercase;
-	padding: 30px;
+  padding: 38px 85px 38px 85px;
     width: 300px;
     border: 0;
    	border-radius: 0;
-   	font-size: 40px;
-   	font-family: 'Lato Bold 700';
+   	font-size: 30px;
    -webkit-appearance: none;
    margin-top: 60px;
 }
 
 button#checkin:hover{
-	background-color: #ffa727;
+	background-color: #EB9410;
 }
 
 @media(min-width:767px) {
@@ -190,11 +209,14 @@ button#checkin:hover{
         padding: 100px 100px;
     }
 
+    .results-section {
+      padding: 100px 100px;
+    }
 
 
     #map {
         height: 400px;
         margin-top: 250px;
     }
-}
 
+}
