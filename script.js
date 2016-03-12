@@ -1,57 +1,60 @@
 
-JSONTest = function() {
- //variabeln jsonObj innehåller den json frågan som används i anropet till SCBs API. Det är alltså denna fråga du skall kopiera från SCB när du i Statistik databasen klickat på "API för denna tabell"
-var jsonObj = 
-{   
-"query": [
- {       
- "code": "ContentsCode",
-  "selection": {         
-    "filter": "item",         
-    "values": [           
-      "BE0101N1"         
-    ]       
-   }     
-},    
-{       
-  "code": "Tid",
-   "selection": {         
-   "filter": "item",         
-   "values": [           
-   "2010",           
-   "2011"         
-   ]       
-  }     
- }    
-],   
-"response": {     
-  "format": "json"   
- } 
-};
-var resultDiv = $("#resultDivContainer");
-//jQuery AJAX method 	
-$.ajax({
- 	 url:"http://api.scb.se/OV0104/v1/doris/sv/ssd/BE/BE0101/BE0101A/BefolkningNy",
-	 type: "GET",
-	 data: JSON.stringify(jsonObj),  //skapa en textsträng av vår JSON-formaterad fråga
-	 dataType: "json",
-	success: function(obj){		//Ta emot JSON objektet från SCB 	 
-		console.log("success");
-		 switch (obj) {
-                case true:
-                    processResponse(obj);
-                    break;
-                default:
-                    resultDiv.html(obj);
-            }
-	},
-  	error: function (errorMessage) {
-	console.log("Något gick fel.");
-	
-	}
-  
-  }); //slut på $.ajax method
-
-}//slut på init function	
 
 
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  //var xmlhttp1 = new XMLHttpRequest();
+
+  xmlhttp.onreadystatechange = function() {
+    //&& xmlhttp1.readyState == 4 && xmlhttp1.status == 200
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200 ) {
+      myFunction(xmlhttp);
+      getNumApartment(xmlhttp1);
+    }
+  };
+  xmlhttp.open("GET", "data/api_match_plats.xml", true);
+  xmlhttp.send();
+  //xmlhttp1.open("GET", "data/api_match_plats.xml", true);
+  //xmlhttp1.send();
+
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  //var xmlDoc1 = xmlhttp1.responseXML;
+
+
+  var table="<tr><th>Annonsrubrik</th><th>Yrkesbenämning</th><th>Kommun</th><th>Länk</th></tr>";
+
+  var x = xmlDoc.getElementsByTagName("matchningdata");
+  //var annonsId = xmlDoc.getElementsByTagName("matchningdata");
+
+
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("arbetsplatsnamn")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("annonsurl")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+
+    //annonsId[i].getElementsByTagName("annonsid")[0].childNodes[0].nodeValue;
+
+  }
+
+  document.getElementById("demo").innerHTML = table;
+
+}
+/*
+function getNumApartment(xml){
+  var i;
+  var xmlDoc1 = xml.responseXML;
+
+
+
+}
+
+*/
