@@ -3,3 +3,100 @@ body{
 	width: 100%;
 	height: 100%;
 }
+
+#title
+{
+	font-size: 500%;
+	font-family: 'Open Sans', 'sans serif';
+	text-transform: uppercase;
+}
+
+#subtitle
+{
+	font-size: 300%;
+	font-family: 'Tahoma';
+}
+
+#searchtext 
+{
+	font-size: 100%;
+}
+
+.housing-section {
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.competence-section {
+    width: 100%;
+    padding: 50px 0;
+    color: #44443E;
+    background-color: #e9e9e9;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+
+}
+
+.styled-select select {
+   background: #e9e9e9;
+   width: 200px;
+   margin-top: 10px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   text-align: center;
+   }
+
+.styled-search input
+{
+	margin-top: 10px;
+   background: #fff;
+   width: 300px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 1px solid #b9b9b9;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+}
+
+.styled-button button {
+	background: #fff;
+	margin-top: 10px;
+   	width: 150px;
+   	font-size: 20px;
+
+}
+
+@media(min-width:767px) {
+    .content-section {
+        padding-top: 250px;
+    }
+
+    .housing-section {
+        padding: 100px 100px;
+
+    }
+
+    .competence-section {
+        padding: 100px 100px;
+    }
+
+
+
+    #map {
+        height: 400px;
+        margin-top: 250px;
+    }
+}
