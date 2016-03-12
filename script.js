@@ -1,83 +1,57 @@
 
-JSONTest = function() {
- //variabeln jsonObj innehåller den json frågan som används i anropet till SCBs API. Det är alltså denna fråga du skall kopiera från SCB när du i Statistik databasen klickat på "API för denna tabell"
-var jsonObj = 
-{
-  "query": [
-    {
-      "code": "Region",
-      "selection": {
-        "filter": "item",
-        "values": [
-          "0043"
-        ]
-      }
-    },
-    {
-      "code": "Agarkategori",
-      "selection": {
-        "filter": "item",
-        "values": [
-          "TOT"
-        ]
-      }
-    },
-    {
-      "code": "Lagenhetstyp",
-      "selection": {
-        "filter": "item",
-        "values": [
-          "2RK"
-        ]
-      }
-    },
-    {
-      "code": "ContentsCode",
-      "selection": {
-        "filter": "item",
-        "values": [
-          "BO0303J1"
-        ]
-      }
-    },
-    {
-      "code": "Tid",
-      "selection": {
-        "filter": "item",
-        "values": [
-          "2015"
-        ]
-      }
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  //var xmlhttp1 = new XMLHttpRequest();
+
+  xmlhttp.onreadystatechange = function() {
+    //&& xmlhttp1.readyState == 4 && xmlhttp1.status == 200
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200 ) {
+      myFunction(xmlhttp);
     }
-  ],
-  "response": {
-    "format": "json"
-  }
-};
-var resultDiv = $("#resultDivContainer");
-//jQuery AJAX method 	
-$.ajax({
- 	 url:"http://api.scb.se/OV0104/v1/doris/sv/ssd/BE/BE0101/BE0101A/BefolkningNy",
-	 type: "GET",
-	 data: JSON.stringify(jsonObj),  //skapa en textsträng av vår JSON-formaterad fråga
-	 dataType: "json",
-	success: function(obj){		//Ta emot JSON objektet från SCB 	 
-		console.log("success");
-		 switch (obj) {
-                case true:
-                    processResponse(obj);
-                    break;
-                default:
-                    resultDiv.html(obj);
-            }
-	},
-  	error: function (errorMessage) {
-	console.log("Något gick fel.");
-	
-	}
+  };
+  xmlhttp.open("GET", "data/api_match_plats.xml", true);
+  xmlhttp.send();
+  //xmlhttp1.open("GET", "data/api_match_plats.xml", true);
+  //xmlhttp1.send();
+
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  //var xmlDoc1 = xmlhttp1.responseXML;
+
+
+  var table="<tr><th>Annonsrubrik</th><th>Yrkesbenämning</th><th>Kommun</th><th>Länk</th></tr>";
+  var kommun = "Kommun:     ";
+  var yrke = "Yrke:      ";
+
+  var x = xmlDoc.getElementsByTagName("matchningdata");
+  //var annonsId = xmlDoc.getElementsByTagName("matchningdata");
+
+
+  for (i = 0; i <x.length; i++) { 
+
+    kommun += " " + x[i].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue;
+    yrke += " " + x[i].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
+
+
   
-  }); //slut på $.ajax method
 
-}//slut på init function	
+  }
 
 
+  //document.getElementById("demo").innerHTML = table;
+  document.getElementById("kommun").innerHTML = kommun;
+  document.getElementById("yrke").innerHTML = yrke;
+
+}
+/*
+function getNumApartment(xml){
+  var i;
+  var xmlDoc1 = xml.responseXML;
+
+
+
+}
+
+*/
