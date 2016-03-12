@@ -2,31 +2,57 @@
 JSONTest = function() {
  //variabeln jsonObj innehåller den json frågan som används i anropet till SCBs API. Det är alltså denna fråga du skall kopiera från SCB när du i Statistik databasen klickat på "API för denna tabell"
 var jsonObj = 
-{   
-"query": [
- {       
- "code": "ContentsCode",
-  "selection": {         
-    "filter": "item",         
-    "values": [           
-      "BE0101N1"         
-    ]       
-   }     
-},    
-{       
-  "code": "Tid",
-   "selection": {         
-   "filter": "item",         
-   "values": [           
-   "2010",           
-   "2011"         
-   ]       
-  }     
- }    
-],   
-"response": {     
-  "format": "json"   
- } 
+{
+  "query": [
+    {
+      "code": "Region",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "0043"
+        ]
+      }
+    },
+    {
+      "code": "Agarkategori",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "TOT"
+        ]
+      }
+    },
+    {
+      "code": "Lagenhetstyp",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "2RK"
+        ]
+      }
+    },
+    {
+      "code": "ContentsCode",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "BO0303J1"
+        ]
+      }
+    },
+    {
+      "code": "Tid",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "2015"
+        ]
+      }
+    }
+  ],
+  "response": {
+    "format": "json"
+  }
 };
 var resultDiv = $("#resultDivContainer");
 //jQuery AJAX method 	
