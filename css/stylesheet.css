@@ -64,27 +64,31 @@ header .header-content .header-content-inner p {
   }
 }
 
+
+
 #title
 {
 	font-size: 500%;
-	font-family: 'Open Sans', 'sans serif';
+	font-family: 'Lato';
 	text-transform: uppercase;
+}
+
+#intro{
+	text-transform: uppercase;
+	font-size: 400%;
+	font-family: 'Lato';
 }
 
 #subtitle
 {
 	font-size: 300%;
-	font-family: 'Tahoma';
+	font-family: 'Lato';
 }
 
-#searchtext 
-{
-	font-size: 100%;
-}
 
 .housing-section {
     width: 100%;
-    padding: 50px 0;
+    padding: 50px 70px;
     color: #fff;
     background-color: #c5d9ed;
      -webkit-background-size: cover;
@@ -117,16 +121,16 @@ header .header-content .header-content-inner p {
 }
 
 .styled-select select {
-   background: #e9e9e9;
-   width: 200px;
-   margin-top: 10px;
-   padding: 5px;
-   font-size: 16px;
-   line-height: 1;
-   border: 0;
-   border-radius: 0;
-   height: 34px;
    text-align: center;
+   color: #fff;
+   background-color: #3b8ec2;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+      font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
    }
 
 .styled-search input
@@ -154,38 +158,21 @@ button#search:hover{
 	background-color: #064150;
 }
 
-button#company{
+button#checkin{
 	background-color: #ffa727;
 	text-align: center;
 	text-transform: uppercase;
-	padding: 10px;
+	padding: 30px;
     width: 300px;
     border: 0;
    	border-radius: 0;
    	font-size: 40px;
-
+   	font-family: 'Lato Bold 700';
    -webkit-appearance: none;
-   margin-top: 10px;
+   margin-top: 60px;
 }
 
-button#company:hover{
-	background-color: #ffa727;
-}
-
-button#private{
-	background-color: #ffa727;
-	text-align: center;
-	text-transform: uppercase;
-	padding: 10px;
-    width: 300px;
-    border: 0;
-   	border-radius: 0;
-   	font-size: 40px;
-    -webkit-appearance: none;
-    margin-top: 10px;
-}
-
-button#private:hover{
+button#checkin:hover{
 	background-color: #ffa727;
 }
 
@@ -210,3 +197,4 @@ button#private:hover{
         margin-top: 250px;
     }
 }
+
