@@ -28,7 +28,7 @@ function myFunction(xml) {
   var x = xmlDoc.getElementsByTagName("matchningdata");
   //var annonsId = xmlDoc.getElementsByTagName("matchningdata");
 
-
+/*
   for (i = 0; i <x.length; i++) { 
 
     kommun += " " + x[i].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue;
@@ -38,7 +38,11 @@ function myFunction(xml) {
   
 
   }
+*/
 
+
+  kommun += " " + x[1].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue;
+  yrke += " " + x[1].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
 
   //document.getElementById("demo").innerHTML = table;
   document.getElementById("kommun").innerHTML = kommun;
