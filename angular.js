@@ -6,13 +6,24 @@
     $routeProvider
 
       // route for the home page
+      .when('/', {
+        templateUrl : 'start.html',
+        controller  : 'mainController'
+      })
+
       .when('/results', {
         templateUrl : 'results.html',
-        controller  : 'mainController'
+        controller  : 'resultsController'
       });
   // create the controller and inject Angular's $scope
   myApp.controller('mainController', function($scope) {
     // create a message to display in our view
     $scope.message = 'About me';
+
+  });
+
+    myApp.controller('resultsController', function($scope) {
+    // create a message to display in our view
+    $scope.message = 'hej';
 
   });
