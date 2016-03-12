@@ -1,6 +1,7 @@
 <!DOCTYPE HTML> 
 
-<html>
+<html ng-app="myApp">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,10 +13,12 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 <script type="text/javascript" src="script.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.min.js"></script>
+   <script src="angular.js"></script>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body ng-controller="mainController" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <header>
         <div class="header-content">
             <div class="header-content-inner">
@@ -78,25 +81,10 @@
 				</button>
 		</a>
 	</div>
-	
-	<div id="results" class="results-section">
-		<div class="row">
-			<div class="col-md-4">
-	  			<img class = "icon" src="html5.gif" style="width:128px;height:128px;">	
-			 </div>
-			 <div class="col-md-4">
-			 	
-			 	 <h2>Kommun</h2> <p id = "kommun"></p>					
-	  			 <h2>Yrke</h2><p id = "yrke"></p>
-			 </div>
-			 <div class="col-md-4">
-			 	<button>Apply now</button>
-			 	<button>Read more</button>
-			 </div>
-		</div>	
 
-	 <hr width = "90%"> 
-	</div>
+  <div id="main">
+    <div ng-view></div>
+  </div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     
