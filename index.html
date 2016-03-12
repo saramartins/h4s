@@ -1,21 +1,24 @@
 <!DOCTYPE HTML> 
 
-<html>
+<html ng-app="myApp">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Ockupera Glesbygd'n</title>
 <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
+
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 <script type="text/javascript" src="script.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.min.js"></script>
+   <script src="angular.js"></script>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body ng-controller="mainController" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <header>
         <div class="header-content">
             <div class="header-content-inner">
@@ -78,6 +81,7 @@
 				</button>
 		</a>
 	</div>
+<<<<<<< HEAD
 	
 	<div id="results" class="results-section">
 		<div class="row">
@@ -96,9 +100,14 @@
 			 	<button id="apply" type="button" onclick="location.href='http://www.facebook.com'"><strong>Read more</strong></button>
 			 </div>
 		</div>	
+=======
+>>>>>>> 5f8a80d21972e7605e2c1eb2d2505dbdacd09c99
 
-	 <hr width = "90%"> 
-	</div>
+  <div id="main">
+    <div ng-view>
+    	<div id = "results"></div>
+    </div>
+  </div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     
