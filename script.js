@@ -1,6 +1,4 @@
 
-
-
 function loadXMLDoc() {
   var xmlhttp = new XMLHttpRequest();
   //var xmlhttp1 = new XMLHttpRequest();
