@@ -95,7 +95,7 @@ width: 80%;
   color:#5F5F5F;
 }
 
-#jobtitle {
+p#kommun {
   text-align: left;
   text-transform: uppercase;
   font-family: 'Lato';
@@ -103,12 +103,39 @@ width: 80%;
   font-size: 200%;
 }
 
-#placeinfo{
+
+p#kommun1 {
+  text-align: left;
+  text-transform: uppercase;
+  font-family: 'Lato';
+  font-weight: bold;
+  font-size: 200%;
+}
+
+p#yrke1{
   text-align: left;
   font-family: 'Lato';
   font-size: 170%;
 }
 
+p#yrke{
+  text-align: left;
+  font-family: 'Lato';
+  font-size: 170%;
+}
+
+
+p#yrkeom{
+  text-align: left;
+  font-family: 'Lato';
+  font-size: 170%;
+}
+
+p#yrkeom{
+  text-align: left;
+  font-family: 'Lato';
+  font-size: 170%;
+}
 
 .housing-section {
     width: 100%;
