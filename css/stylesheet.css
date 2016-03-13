@@ -63,7 +63,12 @@ header .header-content .header-content-inner p {
     margin-right: auto;
   }
 }
-
+hr
+{
+  color: #f00;
+background-color: #f00;
+height: 5px;
+}
 #title
 {
 	font-size: 400%;
