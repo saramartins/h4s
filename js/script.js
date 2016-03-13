@@ -62,8 +62,8 @@ else
   yrke1 += " " + x[1].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
 
   //document.getElementById("demo").innerHTML = table;
-  document.getElementById("kommun1").innerHTML ="<img src=\'img/ikon_housing-01.png\'>" + kommun1;
-  document.getElementById("yrke1").innerHTML = yrke1;
+  document.getElementById("kommun1").innerHTML ="<img height = '40px;' width = '40px;' src=\'img/ikon_housing-01.png\'>" + kommun1;
+  document.getElementById("yrke1").innerHTML = "<img height = '40px;' width = '40px;' src=\'img/ikon_work-01.png\'>" + yrke1;
   document.getElementById("yrke1om").innerHTML = yrke1;
 
   kommun2 += " " + x[2].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue;
