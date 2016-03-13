@@ -27,7 +27,9 @@ var kommun = "";
   var kommun2 = "";
   var yrke2 = "";
 
-  var x = xmlDoc.getElementsByTagName("matchningdata");
+  var e = document.getElementById("housing-selection");
+  var nrOfRooms = e.options[e.selectedIndex].text;
+
   //var annonsId = xmlDoc.getElementsByTagName("matchningdata");
 
 
@@ -35,7 +37,7 @@ var kommun = "";
   yrke += " " + x[0].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
 
   //document.getElementById("demo").innerHTML = table;
-  document.getElementById("kommun").innerHTML = kommun;
+  document.getElementById("kommun").innerHTML = kommun + " 100 apartments with " + nrOfRooms + "available";
   document.getElementById("yrke").innerHTML = yrke;
   document.getElementById("yrkeom").innerHTML = yrke;
 
@@ -44,7 +46,9 @@ var kommun = "";
   yrke1 += " " + x[1].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
 
   //document.getElementById("demo").innerHTML = table;
-  document.getElementById("kommun1").innerHTML = kommun1;
+var e = document.getElementById("ddlViewBy");
+
+  document.getElementById("kommun1").innerHTML = kommun1 + " 358 apartments with " + nrOfRooms + "available";
   document.getElementById("yrke1").innerHTML = yrke1;
   document.getElementById("yrke1om").innerHTML = yrke1;
 
