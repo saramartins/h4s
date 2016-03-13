@@ -7,12 +7,12 @@
 
       // route for the home page
       .when('/', {
-        templateUrl : 'start.html',
+        templateUrl : 'pages/start.html',
         controller  : 'mainController'
       })
 
       .when('/results', {
-        templateUrl : 'results.html',
+        templateUrl : 'pages/results.html',
         controller  : 'resultsController'
       });
 

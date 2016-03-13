@@ -14,7 +14,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../HFS_startsida.jpg');
+  background-image: url('../img/HFS_startsida.jpg');
   text-align: center;
   color: white;
 }
@@ -65,10 +65,12 @@ header .header-content .header-content-inner p {
 }
 hr
 {
-  color: #f00;
-background-color: #f00;
-height: 5px;
+  color: #5F5F5F;
+background-color: #5F5F5F;
+height: 2px;
+width: 80%;
 }
+
 #title
 {
 	font-size: 400%;
@@ -98,13 +100,13 @@ height: 5px;
   text-transform: uppercase;
   font-family: 'Lato';
   font-weight: bold;
-  font-size: 160%;
+  font-size: 200%;
 }
 
 #placeinfo{
   text-align: left;
   font-family: 'Lato';
-  font-size: 140%;
+  font-size: 170%;
 }
 
 
@@ -258,7 +260,7 @@ button#apply:hover{
         height: 400px;
         margin-top: 250px;
     }
-
+/*
     .navbar {
         padding: 20px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -269,5 +271,5 @@ button#apply:hover{
     .top-nav-collapse {
         padding: 0;
     }
-
+*/
 }
