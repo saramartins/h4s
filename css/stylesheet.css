@@ -95,7 +95,7 @@ width: 80%;
   color:#5F5F5F;
 }
 
-p#kommun {
+p#yrke{
   text-align: left;
   text-transform: uppercase;
   font-family: 'Lato';
@@ -103,22 +103,22 @@ p#kommun {
   font-size: 200%;
 }
 
-
-p#kommun1 {
-  text-align: left;
-  text-transform: uppercase;
-  font-family: 'Lato';
-  font-weight: bold;
-  font-size: 200%;
-}
 
 p#yrke1{
   text-align: left;
+  text-transform: uppercase;
+  font-family: 'Lato';
+  font-weight: bold;
+  font-size: 200%;
+}
+
+p#kommun{
+  text-align: left;
   font-family: 'Lato';
   font-size: 170%;
 }
 
-p#yrke{
+p#kommun1{
   text-align: left;
   font-family: 'Lato';
   font-size: 170%;
@@ -131,7 +131,7 @@ p#yrkeom{
   font-size: 170%;
 }
 
-p#yrkeom{
+p#yrkeom1{
   text-align: left;
   font-family: 'Lato';
   font-size: 170%;
