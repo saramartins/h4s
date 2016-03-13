@@ -20,44 +20,6 @@ function myFunction(xml) {
   var xmlDoc = xml.responseXML;
   //var xmlDoc1 = xmlhttp1.responseXML;
 
-/*
-  var table="<tr><th>Annonsrubrik</th><th>Yrkesbenämning</th><th>Kommun</th><th>Länk</th></tr>";
-  var kommun = "";
-  var yrke = "";
-  var url = "";
-  var kommun1 = "";
-  var yrke1 = "";
-  var url1 = "";
-  var kommun2 = "";
-  var yrke2 = "";
-  var url2 = "";
-
-  var x = xmlDoc.getElementsByTagName("matchningdata");
-  //var annonsId = xmlDoc.getElementsByTagName("matchningdata");
-
-
-
-  kommun += " " + x[0].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue;
-  yrke += " " + x[0].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
-  url += " " + x[0].getElementsByTagName("annonsurl")[0].childNodes[0].nodeValue;
-
-  //document.getElementById("demo").innerHTML = table;
-  document.getElementById("kommun").innerHTML = kommun;
-  document.getElementById("yrke").innerHTML = yrke;
-  document.getElementById("url").innerHTML = url;
-
-
-  kommun2 += " " + x[2].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue;
-  yrke2 += " " + x[2].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
-  url2 += " " + x[2].getElementsByTagName("annonsurl")[0].childNodes[0].nodeValue;
-
-  //document.getElementById("demo").innerHTML = table;
-  document.getElementById("kommun2").innerHTML = kommun2;
-  document.getElementById("yrke2").innerHTML = yrke2;
-  document.getElementById("url2").innerHTML = url2;
-
-
-*/
 var kommun = "";
   var yrke = "";
   var url = "";
