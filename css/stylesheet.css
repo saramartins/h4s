@@ -65,10 +65,12 @@ header .header-content .header-content-inner p {
 }
 hr
 {
-  color: #f00;
-background-color: #f00;
-height: 5px;
+  color: #5F5F5F;
+background-color: #5F5F5F;
+height: 2px;
+width: 80%;
 }
+
 #title
 {
 	font-size: 400%;
@@ -98,13 +100,13 @@ height: 5px;
   text-transform: uppercase;
   font-family: 'Lato';
   font-weight: bold;
-  font-size: 160%;
+  font-size: 200%;
 }
 
 #placeinfo{
   text-align: left;
   font-family: 'Lato';
-  font-size: 140%;
+  font-size: 170%;
 }
 
 
