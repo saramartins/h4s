@@ -27,9 +27,11 @@ var kommun = "";
   var kommun2 = "";
   var yrke2 = "";
 
+
+  var x = xmlDoc.getElementsByTagName("matchningdata");
   var selection = document.getElementById("housing-selection");
   var nrOfRooms = selection.options[selection.selectedIndex].text;
-  var x = xmlDoc.getElementsByTagName("matchningdata");
+
   //var annonsId = xmlDoc.getElementsByTagName("matchningdata");
 
 
@@ -42,7 +44,7 @@ var kommun = "";
   document.getElementById("yrkeom").innerHTML = yrke;
 
 
-  kommun1 += " " + x[1].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue;
+  kommun1 += " " + x[1].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue + " 260 apartments with " + nrOfRooms + " available";
   yrke1 += " " + x[1].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
 
   //document.getElementById("demo").innerHTML = table;
