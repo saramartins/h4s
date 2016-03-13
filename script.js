@@ -52,8 +52,8 @@ var kommun = "";
   yrke2 += " " + x[2].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
 
   //document.getElementById("demo").innerHTML = table;
-  document.getElementById("kommun2").innerHTML = kommun2;
-  document.getElementById("yrke2").innerHTML = yrke2;
+  //document.getElementById("kommun2").innerHTML = kommun2;
+ //document.getElementById("yrke2").innerHTML = yrke2;
 
 
 
