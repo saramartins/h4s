@@ -88,6 +88,18 @@ header .header-content .header-content-inner p {
   color:#5F5F5F;
 }
 
+#jobtitle {
+  text-align: left;
+  text-transform: uppercase;
+  font-family: 'Lato';
+  font-weight: bold;
+}
+
+#placeinfo{
+  text-align: left;
+  font-family: 'Lato';
+}
+
 
 .housing-section {
     width: 100%;
