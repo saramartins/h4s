@@ -27,18 +27,18 @@ var kommun = "";
   var kommun2 = "";
   var yrke2 = "";
 
-  var e = document.getElementById("housing-selection");
-  var nrOfRooms = e.options[e.selectedIndex].text;
-
+  var selection = document.getElementById("housing-selection");
+  var nrOfRooms = selection.options[selection.selectedIndex].text;
+  var x = xmlDoc.getElementsByTagName("matchningdata");
   //var annonsId = xmlDoc.getElementsByTagName("matchningdata");
 
 
-  kommun += " " + x[0].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue;
+  kommun += " " + x[0].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue + " 150 apartments with " + nrOfRooms + " available";
   yrke += " " + x[0].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
 
   //document.getElementById("demo").innerHTML = table;
-  document.getElementById("kommun").innerHTML = kommun + " 100 apartments with " + nrOfRooms + "available";
-  document.getElementById("yrke").innerHTML = yrke;
+  document.getElementById("kommun").innerHTML = kommun;
+  document.getElementById("yrke").innerHTML =  yrke;
   document.getElementById("yrkeom").innerHTML = yrke;
 
 
@@ -46,8 +46,7 @@ var kommun = "";
   yrke1 += " " + x[1].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
 
   //document.getElementById("demo").innerHTML = table;
-
-  document.getElementById("kommun1").innerHTML = kommun1 + " 358 apartments with " + nrOfRooms + "available";
+  document.getElementById("kommun1").innerHTML = kommun1;
   document.getElementById("yrke1").innerHTML = yrke1;
   document.getElementById("yrke1om").innerHTML = yrke1;
 
