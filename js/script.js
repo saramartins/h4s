@@ -37,11 +37,11 @@ var kommun = "";
 
   if(nrOfRooms == 1)
   {
-    kommun += " " + x[0].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue + " 154 apartments with " + nrOfRooms + " room available";
+    kommun += " " + x[0].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue + "| 154 apartments with " + nrOfRooms + " room available";
   }
   else 
   {
-    kommun += " " + x[0].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue + " 358 apartments with " + nrOfRooms + " rooms available";
+    kommun += " " + x[0].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue + "| 358 apartments with " + nrOfRooms + " rooms available";
   }
   yrke += " " + x[0].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
 
@@ -52,11 +52,11 @@ var kommun = "";
 
 if(nrOfRooms ==1)
 {
-   kommun1 += " " + x[1].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue + " 154 apartments with " + nrOfRooms + " room available";
+   kommun1 += " " + x[1].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue + "| 154 apartments with " + nrOfRooms + " room available";
 }
 else
 {
-   kommun1 += " " + x[1].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue + " 358 apartments with " + nrOfRooms + " rooms available";
+   kommun1 += " " + x[1].getElementsByTagName("kommunnamn")[0].childNodes[0].nodeValue + "| 358 apartments with " + nrOfRooms + " rooms available";
 }
  
   yrke1 += " " + x[1].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;

@@ -65,8 +65,8 @@ header .header-content .header-content-inner p {
 }
 hr
 {
-  color: #5F5F5F;
-background-color: #5F5F5F;
+  color: #c5d9ed;
+background-color: #c5d9ed;
 height: 2px;
 width: 80%;
 }
@@ -115,26 +115,26 @@ p#yrke1{
 p#kommun{
   text-align: left;
   font-family: 'Lato';
-  font-size: 170%;
+  font-size: 150%;
 }
 
 p#kommun1{
   text-align: left;
   font-family: 'Lato';
-  font-size: 170%;
+  font-size: 150%;
 }
 
 
 p#yrkeom{
   text-align: left;
   font-family: 'Lato';
-  font-size: 150%;
+  font-size: 160%;
 }
 
 p#yrke1om{
   text-align: left;
   font-family: 'Lato';
-  font-size: 150%;
+  font-size: 160%;
 }
 
 .housing-section {
