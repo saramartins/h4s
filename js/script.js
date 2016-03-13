@@ -46,7 +46,6 @@ var kommun = "";
   yrke1 += " " + x[1].getElementsByTagName("annonsrubrik")[0].childNodes[0].nodeValue;
 
   //document.getElementById("demo").innerHTML = table;
-var e = document.getElementById("ddlViewBy");
 
   document.getElementById("kommun1").innerHTML = kommun1 + " 358 apartments with " + nrOfRooms + "available";
   document.getElementById("yrke1").innerHTML = yrke1;
